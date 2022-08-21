@@ -13,8 +13,8 @@
     },
     {
       "id": 2,
-      "name": "Sala",
-      "hp": "20",
+      "name": "Salamèche",
+      "hp": "25",
       "cp": "10",
       "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/004.png",
       "types": [
@@ -134,16 +134,6 @@
       "types": [
         "Plante",
         "Poison"
-      ]
-    },
-    {
-      "id": 1661122846065,
-      "hp": 100,
-      "cp": 10,
-      "name": "Dracofeu",
-      "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/006.png",
-      "types": [
-        "Feu"
       ]
     }
   ]
