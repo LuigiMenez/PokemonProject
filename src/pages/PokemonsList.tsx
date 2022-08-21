@@ -3,6 +3,7 @@ import Pokemon from "../models/pokemon";
 import PokemonCard from "../components/PokemonCard";
 import { Link } from "react-router-dom";
 import PokemonService from "../services/pokemonService";
+import SearchPokemon from "../components/SearchPokemon";
 /**
  * Composant pour afficher une liste de carte de Pokémon
  * @returns des cartes de Pokémon
@@ -22,6 +23,7 @@ const PokemonList: React.FC = () => {
     <Fragment>
       <div className="container">
         <h2 className="header center">{nom}</h2>
+        <SearchPokemon />
         <div className="row">
           {pokemons.map((pokemon) => (
             <Link to={`/pokemon/${pokemon.id}`} key={pokemon.id}>
