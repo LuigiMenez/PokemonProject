@@ -33,6 +33,7 @@ const PokemonForm: React.FC<Props> = ({ pokemon, isEditForm }) => {
   });
 
   const navigate = useNavigate();
+
   const types: string[] = [
     "Plante",
     "Feu",
@@ -150,7 +151,7 @@ const PokemonForm: React.FC<Props> = ({ pokemon, isEditForm }) => {
                       value={form.picture.value}
                       type="text"
                       className="form-control"
-                      onChange={(evt) => handleInputChange(evt)}
+                      onChange={handleInputChange}
                     ></input>
                   </div>
                 )}
@@ -164,7 +165,7 @@ const PokemonForm: React.FC<Props> = ({ pokemon, isEditForm }) => {
                     value={form.name.value}
                     type="text"
                     className="form-control"
-                    onChange={(evt) => handleInputChange(evt)}
+                    onChange={handleInputChange}
                   ></input>
                 </div>
 
@@ -177,7 +178,7 @@ const PokemonForm: React.FC<Props> = ({ pokemon, isEditForm }) => {
                     value={form.hp.value}
                     type="number"
                     className="form-control"
-                    onChange={(evt) => handleInputChange(evt)}
+                    onChange={handleInputChange}
                   ></input>
                 </div>
 
@@ -190,7 +191,7 @@ const PokemonForm: React.FC<Props> = ({ pokemon, isEditForm }) => {
                     value={form.cp.value}
                     type="number"
                     className="form-control"
-                    onChange={(evt) => handleInputChange(evt)}
+                    onChange={handleInputChange}
                   ></input>
                 </div>
 

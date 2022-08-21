@@ -38,6 +38,7 @@ export default class PokemonService {
       .catch((error) => this.handleError(error));
   }
 
+  //Fonction pour supprimer un Pokemon de notre bdd
   static deletePokemon(pokemon: Pokemon): Promise<Pokemon> {
     return fetch(`http://localhost:3001/pokemons/${pokemon.id}`, {
       method: "DELETE",
@@ -47,6 +48,7 @@ export default class PokemonService {
       .catch((error) => this.handleError(error));
   }
 
+  // Fonction pour ajouter un Pokémon à notre bdd
   static addPokemon(pokemon: Pokemon): Promise<Pokemon> {
     delete pokemon.created;
     return fetch(`http://localhost:3001/pokemons`, {
@@ -58,6 +60,7 @@ export default class PokemonService {
       .catch((error) => this.handleError(error));
   }
 
+  //Fonction pour faire une recherche de Pokémon
   static searchPokemon(term: string): Promise<Pokemon[]> {
     return fetch(`http://localhost:3001/pokemons?q=${term}`)
       .then((response) => response.json())
