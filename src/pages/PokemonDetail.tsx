@@ -4,6 +4,7 @@ import Pokemon from "../models/pokemon";
 import formatDate from "../helpers/formatDate";
 import formatType from "../helpers/formatType";
 import PokemonService from "../services/pokemonService";
+import Loader from "../components/Loader";
 
 const PokemonsDetail: React.FC = () => {
   const [pokemon, setPokemon] = useState<Pokemon | null>(null);
@@ -84,7 +85,9 @@ const PokemonsDetail: React.FC = () => {
           </div>
         </div>
       ) : (
-        <h4 className="center">Aucun pokémon à afficher !</h4>
+        <h4 className="center">
+          <Loader />
+        </h4>
       )}
     </Fragment>
   );

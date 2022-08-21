@@ -3,6 +3,7 @@ import PokemonForm from "../components/PokemonForm";
 import Pokemon from "../models/pokemon";
 import { useParams } from "react-router";
 import PokemonService from "../services/pokemonService";
+import Loader from "../components/Loader";
 
 const PokemonEdit: React.FC = () => {
   const [pokemon, setPokemon] = useState<Pokemon | null>(null);
@@ -22,7 +23,9 @@ const PokemonEdit: React.FC = () => {
           <PokemonForm pokemon={pokemon} isEditForm={true}></PokemonForm>
         </div>
       ) : (
-        <h4 className="center">Aucun pokémon à afficher !</h4>
+        <h4 className="center">
+          <Loader />
+        </h4>
       )}
     </div>
   );
