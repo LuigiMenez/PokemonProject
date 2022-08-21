@@ -108,7 +108,7 @@ const PokemonForm: React.FC<Props> = ({ pokemon, isEditForm }) => {
   //Fonction pour mettre à jour les donnée d'un Pokémon.
   const upDatePokemon = () => {
     PokemonService.updatePokemon(pokemon).then(() =>
-      navigate(`pokemon/${pokemon.id}`)
+      navigate(`/pokemon/${pokemon.id}`)
     );
   };
 
